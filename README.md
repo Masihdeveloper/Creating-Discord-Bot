@@ -1,2 +1,5 @@
-# Creating-Discord-Bot
-Hello Guys in this Tutorial i will show you how to make and online your Discord bot designed in d.js V13 and Advanced ping command for response to your members without any hanlding files (So Easier to Learn), hope you Enjoy and Don't forget to star, Made with <span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:99.94124559341951% 26.02820211515864%;background-size:5418.75% 5418.75%" data-codepoints="2764-fe0f"></span></span> by Masih#0258
+before run this source wiht `node .` intsall the requirement package with `npm i` 
+you use d.js v13 and your node.js must v16 or higher
+if you have a problem while usign this source make your to DM me discord i will help you and fix your issue
+have a good day and enjoy your new bot :)
+Copyright (c): Masih 2022/12/16
