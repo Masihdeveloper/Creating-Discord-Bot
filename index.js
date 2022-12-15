@@ -13,8 +13,10 @@ const client = new Client({
   ],
 });
 
+require("dotenv").config();
+
 client.on("messageCreate", async (message) => {
-  const prefix = "YOUR FAVORITE PREFIX";
+  const prefix = process.env.PREFIX;
   if (message.content.startsWith(`${prefix}ping`)) {
     const { MessageEmbed } = require("discord.js");
     const ms = require("ms");
@@ -76,4 +78,4 @@ client.on("ready", async () => {
   console.log(`${client.user.username} ready!`);
 });
 
-client.login('YOUR TOKEN HERE');
+client.login(process.env.TOKEN);
