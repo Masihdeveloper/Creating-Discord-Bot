@@ -13,8 +13,10 @@ const {
   ActivityType,
 } = require("discord.js");
 const { joinVoiceChannel } = require("@discordjs/voice");
-const prefix = "Your Prefix";
 const ms = require("ms");
+const prefix = "Your Prefix";
+const ping = Date.now() - message.createdTimestamp;
+const time = "6s";
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -34,8 +36,6 @@ client.on("messageCreate", async (message) => {
       content: "🎉 Calculating the Bot's Ping...",
       fetchReply: true,
     });
-
-    const ping = Date.now() - message.createdTimestamp;
 
     const PingEmbed = new EmbedBuilder()
       .setTitle(client.user.username + " - Pong!")
@@ -74,7 +74,6 @@ client.on("messageCreate", async (message) => {
       })
       .setTimestmap();
 
-    const time = "6s";
     setTimeout(function () {
       message.channel.sendTyping();
       FirstPingReply.edit({ content: "\u200B", embeds: [PingEmbed] });
