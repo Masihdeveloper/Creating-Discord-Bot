@@ -1,3 +1,11 @@
+/* 
+Make Online your Bot in Discord.js V14
+Hope you Enjoy, Made with 💜 by Masih#0258
+Github: https://github.com/Masihdev1 | Don't forget to ⭐
+Website: https://masihdev.tk/
+Copyright Masih 2024 All Right Reserved!
+*/
+
 const {
   Client,
   GatewayIntentBits,
@@ -90,7 +98,7 @@ client.on("ready", async () => {
     });
   }, 15000);
 
-  console.log(`${client.user.username} ready!`);
+  console.log(`${client.user.username} ready!\nGithub: https://github.com/masihdev1 | Don't forget to ⭐`);
 });
 
 client.login("TOKEN");
