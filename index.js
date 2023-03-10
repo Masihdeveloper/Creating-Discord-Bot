@@ -1,34 +1,35 @@
-const { Client, Intents } = require("discord.js");
-
+const {
+  Client,
+  GatewayIntentBits,
+  EmbedBuilder,
+  ActivityType,
+} = require("discord.js");
+const { joinVoiceChannel } = require("@discordjs/voice");
+const prefix = "Your Prefix";
+const ms = require("ms");
 const client = new Client({
-  partials: ["MESSAGE", "CHANNEL", "REACTION", "USER", "GUILD_MEMBER"],
   intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_MEMBERS,
-    Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
-    Intents.FLAGS.GUILD_VOICE_STATES,
-    Intents.FLAGS.GUILD_PRESENCES,
-    Intents.FLAGS.DIRECT_MESSAGES,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildPresences,
+    GatewayIntentBits.GuildEmojisAndStickers,
+    GatewayIntentBits.DirectMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMessageTyping,
   ],
 });
 
-require("dotenv").config();
-
 client.on("messageCreate", async (message) => {
-  const prefix = process.env.PREFIX;
   if (message.content.startsWith(`${prefix}ping`)) {
-    const { MessageEmbed } = require("discord.js");
-    const ms = require("ms");
-    const Pings = await message.reply({
-      content: "<a:emoji_23:951619520307548240> Calculating the Bot's Ping...",
+    const FirstPingReply = await message.reply({
+      content: "🎉 Calculating the Bot's Ping...",
       fetchReply: true,
     });
 
     const ping = Date.now() - message.createdTimestamp;
 
-    const PingEmbed = new MessageEmbed()
-      .setColor(`${message.guild.me.displayHexColor}`)
+    const PingEmbed = new EmbedBuilder()
       .setTitle(client.user.username + " - Pong!")
       .setThumbnail(
         client.user.displayAvatarURL({
@@ -39,21 +40,22 @@ client.on("messageCreate", async (message) => {
       )
       .addFields(
         {
-          name: `🛰Message Ping:`,
+          name: `🛰 Message Ping:`,
           value: `**__${ping}ms__**`,
         },
         {
-          name: `📊API Latency:`,
+          name: `📊 API Latency:`,
           value: `**__${Math.round(client.ws.ping)}ms__**`,
         },
         {
-          name: `⏳Uptime:`,
+          name: `⏳ Uptime:`,
           value: `<t:${Math.round(
             client.readyTimestamp / 1000
           )}:f> | <t:${Math.round(client.readyTimestamp / 1000)}:R>`,
         }
       )
-      .setTimestamp()
+      .setColor(`${message.guild.members.me.displayHexColor}`)
+
       .setFooter({
         text: `Requested by ${message.author.username}`,
         iconURL: message.author.displayAvatarURL({
@@ -61,21 +63,34 @@ client.on("messageCreate", async (message) => {
           size: 4096,
           format: "png",
         }),
-      });
+      })
+      .setTimestmap();
 
-    let time = "6s";
+    const time = "6s";
     setTimeout(function () {
       message.channel.sendTyping();
-      Pings.edit({ content: "\u200B", embeds: [PingEmbed] });
+      FirstPingReply.edit({ content: "\u200B", embeds: [PingEmbed] });
     }, ms(time));
   }
 });
 client.on("ready", async () => {
   //Status of your bot; also you can change "idle" with: 'dnd', "online"
-   client.user.setPresence({
-      status: "idle",
+  client.user.setPresence({
+    status: "idle",
+    activities: [{ name: "Nothing...", type: ActivityType.Watching }],
+  });
+
+  //Join to a Voice Channel
+  setInterval(() => {
+    const connection = joinVoiceChannel({
+      channelId: "Voice Channel ID",
+      guildId: "Guild ID",
+      selfDeaf: false, // Also you change it to true for deafen in Voice Channel
+      adapterCreator: client.guilds.cache.get("Guild ID").voiceAdapterCreator,
     });
+  }, 15000);
+
   console.log(`${client.user.username} ready!`);
 });
 
-client.login(process.env.TOKEN);
+client.login("TOKEN");
