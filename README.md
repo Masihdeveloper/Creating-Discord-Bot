@@ -2,7 +2,7 @@ Before you get started anything you need to create your NEW Application bot in h
 
 Now you need to install Javascript Environment Run (Node.js) in your Computer, Simply visit the https://nodejs.org and download the Verison 16.9 or higher, Because the Discord.js V14 is only valid in this version!
 
-After the download is complete, Open your code Editor, I recommend for you to use Visual Studio Code, You can download this Appliction on your computer in https://code.visualstudio.com
+After the download is complete, Open your code Editor, I recommend for you to use Visual Studio Code, You can download this Application on your computer in https://code.visualstudio.com
 
 Now Open your Toggle Panel with 
 ```
