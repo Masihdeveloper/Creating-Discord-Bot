@@ -38,4 +38,6 @@ If you have a problem while usign this source make your to DM me discord: Masih#
 
 have a good day and enjoy your new bot :)
 
+For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/
+
 Copyright (c): Masih 2022/12/16
