@@ -8,7 +8,7 @@ Now Open your Toggle Panel with
 ```
 CTRL + J 
 ```
-Select Terminal Option and Type
+Select the Terminal Option and Type
 ```
 npm init -y
 ```
