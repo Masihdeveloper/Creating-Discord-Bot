@@ -25,7 +25,7 @@ CTRL + Alt + Windows + N
 ```
 and set the name to anything you want such as: `index.js`, `bot.js`, `main.js`
 
-Then Upload the source of this repository along with your personal information for example: `botToken`and `voiceChannelId` in config.json
+Then Upload the source of this repository along with your personal information for example: `botToken` and `voiceChannelId` in config.json
 
 Now enter the following command in your terminal to run and processing your file and wait for response...
 ``` 
