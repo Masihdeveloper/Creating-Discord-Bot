@@ -1,3 +1,4 @@
 {
-  "botToken": "YOUR BOT TOKEN"
+  "botToken": "YOUR BOT TOKEN",
+  "voiceChannelId": "YOUR VOICE CHANNEL ID"
 }
