@@ -13,31 +13,25 @@ const {
   ActivityType,
 } = require("discord.js");
 const { joinVoiceChannel } = require("@discordjs/voice");
-const ms = require("ms");
-const prefix = "Your Prefix";
-const ping = Date.now() - message.createdTimestamp;
-const time = "6s";
+const config = require("./config.json");
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildPresences,
-    GatewayIntentBits.GuildEmojisAndStickers,
-    GatewayIntentBits.DirectMessages,
     GatewayIntentBits.MessageContent,
-    GatewayIntentBits.GuildMessageTyping,
   ],
 });
 
 client.on("messageCreate", async (message) => {
+
   if (message.content.startsWith(`${prefix}ping`)) {
     const FirstPingReply = await message.reply({
       content: "🎉 Calculating the Bot's Ping...",
       fetchReply: true,
     });
 
-    const PingEmbed = new EmbedBuilder()
+    const pingEmbed = new EmbedBuilder()
       .setTitle(client.user.username + " - Pong!")
       .setThumbnail(
         client.user.displayAvatarURL({
@@ -49,7 +43,7 @@ client.on("messageCreate", async (message) => {
       .addFields(
         {
           name: `🛰 Message Ping:`,
-          value: `**__${ping}ms__**`,
+          value: `**__${Date.now() - message.createdTimestamp}ms__**`,
         },
         {
           name: `📊 API Latency:`,
@@ -76,8 +70,8 @@ client.on("messageCreate", async (message) => {
 
     setTimeout(function () {
       message.channel.sendTyping();
-      FirstPingReply.edit({ content: "\u200B", embeds: [PingEmbed] });
-    }, ms(time));
+      FirstPingReply.edit({ content: "\u200B", embeds: [pingEmbed] });
+    }, 6000);
   }
 });
 client.on("ready", async () => {
@@ -89,15 +83,16 @@ client.on("ready", async () => {
 
   //Join to a Voice Channel
   setInterval(() => {
-    const connection = joinVoiceChannel({
-      channelId: "Voice Channel ID",
-      guildId: "Guild ID",
+    const voiceChannel = client.channels.cache.get()
+    joinVoiceChannel({
+      channelId: voiceChannel.id,
+      guildId: voiceChannel.guild.id,
       selfDeaf: false, // Also you change it to true for deafen in Voice Channel
-      adapterCreator: client.guilds.cache.get("Guild ID").voiceAdapterCreator,
+      adapterCreator: voiceChannel.guild.voiceAdapterCreator,
     });
   }, 15000);
 
-  console.log(`${client.user.username} ready!\nGithub: https://github.com/masihdev1 | Don't forget to ⭐`);
+  console.log(`Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdev1 | Don't forget to ⭐`);
 });
 
 client.login("TOKEN");
