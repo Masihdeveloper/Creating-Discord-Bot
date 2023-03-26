@@ -25,7 +25,7 @@ const client = new Client({
 
 client.on("messageCreate", async (message) => {
 
-  if (message.content.startsWith(`${prefix}ping`)) {
+  if (message.content.startsWith(`${config.prefix}ping`)) {
     const FirstPingReply = await message.reply({
       content: "🎉 Calculating the Bot's Ping...",
       fetchReply: true,
