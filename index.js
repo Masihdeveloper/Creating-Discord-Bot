@@ -83,7 +83,7 @@ client.on("ready", async () => {
 
   //Join to a Voice Channel
   setInterval(() => {
-    const voiceChannel = client.channels.cache.get()
+    const voiceChannel = client.channels.cache.get(config.voiceChannelId)
     joinVoiceChannel({
       channelId: voiceChannel.id,
       guildId: voiceChannel.guild.id,
@@ -95,4 +95,4 @@ client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdev1 | Don't forget to ⭐`);
 });
 
-client.login("TOKEN");
+client.login(config.botToken);
