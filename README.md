@@ -4,7 +4,7 @@ Now you need to install Javascript Environment Run (Node.js) in your Computer, S
 
 After the download is complete, Open your code Editor, I recommend for you to use Visual Studio Code, You can download this Application on your computer in https://code.visualstudio.com
 
-Now Open your Toggle Panel with .
+Now Open your Toggle Panel with
 ```
 CTRL + J 
 ```
