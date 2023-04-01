@@ -33,7 +33,7 @@ npm install @discordjs/voice
 <hr>
 
 wait to install...
-Now create a NEW file with
+and Now create a NEW file with
 ```
 CTRL + Alt + Windows + N
 ```
