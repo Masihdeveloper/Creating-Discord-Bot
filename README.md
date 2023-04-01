@@ -54,11 +54,11 @@ have a good day and enjoy your new bot :)
 
 
 ## Images
-![Ping Command](https://cdn.discordapp.com/attachments/929430663529119815/1091620278691438602/image.png) 
+Ping & Uptime Command ![Ping Command](https://cdn.discordapp.com/attachments/929430663529119815/1091620278691438602/image.png) 
 
-![Join Voice Channel](https://cdn.discordapp.com/attachments/929430663529119815/1091620505179656262/image.png) 
+Join to a Voice Channel ![Join Voice Channel](https://cdn.discordapp.com/attachments/929430663529119815/1091620505179656262/image.png) 
 
-![RGB Role](https://cdn.discordapp.com/attachments/929430663529119815/1091621173298745364/image.png)
+RGB Role ![RGB Role](https://cdn.discordapp.com/attachments/929430663529119815/1091621173298745364/image.png)
 
 Copyright (c): Masih 2022/12/16
 
