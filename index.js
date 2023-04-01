@@ -13,33 +13,36 @@ const {
   ActivityType,
 } = require("discord.js");
 const { joinVoiceChannel } = require("@discordjs/voice");
-const config = require("./config.json");
+const config = require("/home/container/config.json");
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.MessageContent,
-    GatewayIntentBits.GuildPresences
+    GatewayIntentBits.GuildPresences,
   ],
 });
 
 client.on("ready", async () => {
-  async function status() {
-    const guild = client.guilds.cache.get(config.guildId);
-    const members = await guild.members.fetch({ withPresences: true });
-    const onlineMembersSize = members.filter(
+  const voiceChannel = client.channels.cache.get(config.voiceChannelId);
+  //Make Random status and Activity
+  async function changeStatus() {
+    const members = await voiceChannel.guild.members.fetch({
+      withPresences: true,
+    });
+    const onlineMembersCount = members.filter(
       (m) =>
         m.presence?.status === "online" ||
         m.presence?.status === "idle" ||
         m.presence?.status === "dnd"
     ).size;
-       const activeMiceSize = members.filter(m=> m.voice.channel).size
+    const activeMicsCount = members.filter((m) => m.voice.channel).size;
     const activityName = [
-      `${guild.name}`,
-      `${guild.memberCount} Members`,
-      `${onlineMembersSize} Online`,
-      `${activeMiceSize} Active Mics`,
+      `${voiceChannel.guild.name}`, // Guild Name
+      `${voiceChannel.guild.memberCount} Members`, // Guild Members Count
+      `${onlineMembersCount} Online`, // Online Guild Members Count
+      `${activeMicsCount} Active Mics`, // Total Members that Join to a Voice Channel
     ];
     const activityType = [
       ActivityType.Competing,
@@ -47,36 +50,38 @@ client.on("ready", async () => {
       ActivityType.Watching,
       ActivityType.Listening,
     ];
-       const allStatus = ["online", "idle", "dnd"]
-       
+    const status = ["online", "idle", "dnd"];
+
     const random = Math.floor(Math.random() * activityName.length);
     client.user.setPresence({
-      status: allStatus[random],
+      status: status[random],
       activities: [{ name: activityName[random], type: activityType[random] }],
     });
-     }
-    setInterval(status, 15000)
-    
+  }
+  // Refresh to Info every 15s
+  setInterval(changeStatus, 15000);
+
   //Join to a Voice Channel
- function joinVoice(){
-    const voiceChannel = client.channels.cache.get(config.voiceChannelId)
+  function joinVoice() {
     joinVoiceChannel({
       channelId: voiceChannel.id,
       guildId: voiceChannel.guild.id,
       selfDeaf: true, // Also you change it to true for deafen in Voice Channel
       adapterCreator: voiceChannel.guild.voiceAdapterCreator,
     });
- }
-    setInterval(joinVoice, 20000)
+  }
+  setInterval(joinVoice, 30000);
 
-  console.log(`Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdev1 | Don't forget to ⭐`);
+  console.log(
+    `Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdev1 | Don't forget to ⭐`
+  );
 });
 
 client.on("messageCreate", async (message) => {
-
+  //Advacned Ping Command
   if (message.content.startsWith(`${config.prefix}ping`)) {
-      const pingEmbed = new EmbedBuilder()
-    .setTitle(client.user.username + " - Pong!")
+    const pingEmbed = new EmbedBuilder()
+      .setTitle(client.user.username + " - Pong!")
       .setThumbnail(
         client.user.displayAvatarURL({
           dynamic: true,
@@ -112,14 +117,15 @@ client.on("messageCreate", async (message) => {
       })
       .setTimestamp();
 
-      
-      message.channel.sendTyping();
-      message.reply({ embeds: [pingEmbed], allowedMentions: {
-              repliedUser: true,
-            }
-                    });
-           message.react("✅");
-      }
+    message.channel.sendTyping();
+    message.reply({
+      embeds: [pingEmbed],
+      allowedMentions: {
+        repliedUser: false,
+      },
+    });
+    message.react("✅");
+  }
 });
 
 client.login(config.botToken);
