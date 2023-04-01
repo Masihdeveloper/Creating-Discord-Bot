@@ -20,19 +20,63 @@ const client = new Client({
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildPresences
   ],
+});
+
+client.on("ready", async () => {
+  async function status() {
+    const guild = client.guilds.cache.get(config.guildId);
+    const members = await guild.members.fetch({ withPresences: true });
+    const onlineMembersSize = members.filter(
+      (m) =>
+        m.presence?.status === "online" ||
+        m.presence?.status === "idle" ||
+        m.presence?.status === "dnd"
+    ).size;
+       const activeMiceSize = members.filter(m=> m.voice.channel).size
+    const activityName = [
+      `${guild.name}`,
+      `${guild.memberCount} Members`,
+      `${onlineMembersSize} Online`,
+      `${activeMiceSize} Active Mics`,
+    ];
+    const activityType = [
+      ActivityType.Competing,
+      ActivityType.Watching,
+      ActivityType.Watching,
+      ActivityType.Listening,
+    ];
+       const allStatus = ["online", "idle", "dnd"]
+       
+    const random = Math.floor(Math.random() * activityName.length);
+    client.user.setPresence({
+      status: allStatus[random],
+      activities: [{ name: activityName[random], type: activityType[random] }],
+    });
+     }
+    setInterval(status, 15000)
+    
+  //Join to a Voice Channel
+ function joinVoice(){
+    const voiceChannel = client.channels.cache.get(config.voiceChannelId)
+    joinVoiceChannel({
+      channelId: voiceChannel.id,
+      guildId: voiceChannel.guild.id,
+      selfDeaf: true, // Also you change it to true for deafen in Voice Channel
+      adapterCreator: voiceChannel.guild.voiceAdapterCreator,
+    });
+ }
+    setInterval(joinVoice, 20000)
+
+  console.log(`Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdev1 | Don't forget to ⭐`);
 });
 
 client.on("messageCreate", async (message) => {
 
   if (message.content.startsWith(`${config.prefix}ping`)) {
-    const firstPingReply = await message.reply({
-      content: "🎉 Calculating the Bot's Ping...",
-      fetchReply: true,
-    });
-
-    const pingEmbed = new EmbedBuilder()
-      .setTitle(client.user.username + " - Pong!")
+      const pingEmbed = new EmbedBuilder()
+    .setTitle(client.user.username + " - Pong!")
       .setThumbnail(
         client.user.displayAvatarURL({
           dynamic: true,
@@ -66,33 +110,16 @@ client.on("messageCreate", async (message) => {
           format: "png",
         }),
       })
-      .setTimestmap();
+      .setTimestamp();
 
-    setTimeout(function () {
+      
       message.channel.sendTyping();
-       firstPingReply.edit({ content: "\u200B", embeds: [pingEmbed] });
-    }, 6000);
-  }
-});
-client.on("ready", async () => {
-  //Status of your bot; also you can change "idle" with: 'dnd', "online"
-  client.user.setPresence({
-    status: "idle",
-    activities: [{ name: "Nothing...", type: ActivityType.Watching }],
-  });
-
-  //Join to a Voice Channel
-  setInterval(() => {
-    const voiceChannel = client.channels.cache.get(config.voiceChannelId)
-    joinVoiceChannel({
-      channelId: voiceChannel.id,
-      guildId: voiceChannel.guild.id,
-      selfDeaf: true, // Also you change it to true for deafen in Voice Channel
-      adapterCreator: voiceChannel.guild.voiceAdapterCreator,
-    });
-  }, 15000);
-
-  console.log(`Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdev1 | Don't forget to ⭐`);
+      message.reply({ embeds: [pingEmbed], allowedMentions: {
+              repliedUser: true,
+            }
+                    });
+           message.react("✅");
+      }
 });
 
 client.login(config.botToken);
