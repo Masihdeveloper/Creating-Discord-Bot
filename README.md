@@ -20,6 +20,7 @@ Now you need to install all required package such as Discord.js module with
 npm install
 ```
 If is not worked use this in your terminal:
+<hr>
 ```
 npm install Discord.js
 ```
