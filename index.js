@@ -26,7 +26,7 @@ const client = new Client({
 
 client.on("ready", async () => {
   const voiceChannel = client.channels.cache.get(config.voiceChannelId);
-  //Make Random status and Activity
+  // Make Random status and Activity
   async function changeStatus() {
     const members = await voiceChannel.guild.members.fetch({
       withPresences: true,
