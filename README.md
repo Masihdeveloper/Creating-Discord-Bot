@@ -19,7 +19,7 @@ Now you need to install all required package such as Discord.js module with
 ```
 npm install
 ```
-If is not worked use this in your console:
+If is not worked use this in your terminal:
 ```
 npm install Discord.js
 ```
@@ -27,8 +27,8 @@ and
 ```
 npm install @discordjs/voice
 ```
-
-in your Terminal and wait...
+<hr>
+wait to install...
 Now create a NEW file with
 ```
 CTRL + Alt + Windows + N
