@@ -13,7 +13,7 @@ const {
   ActivityType,
 } = require("discord.js");
 const { joinVoiceChannel } = require("@discordjs/voice");
-const config = require("/home/container/config.json");
+const config = require("./config.json");
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
