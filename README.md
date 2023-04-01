@@ -1,4 +1,5 @@
 Before you get started anything you need to create your NEW Application bot in https://discord.com/developers , Then copy and save your Application Bot's TOKEN (Please don't share this with anyone, Because whoever has it will have full access to your bot, for example they can Nuked your server!)
+**Make sure that your Bot access to Intents in the Portal**
 
 Now you need to install Javascript Environment Run (Node.js) in your Computer, Simply visit the https://nodejs.org and download the Verison 16.9 or higher, Because the Discord.js V14 is only valid in this version!
 
@@ -18,6 +19,15 @@ Now you need to install all required package such as Discord.js module with
 ```
 npm install
 ```
+If is not worked use this in your console:
+```
+npm install Discord.js
+```
+and
+```
+npm install @discordjs/voice
+```
+
 in your Terminal and wait...
 Now create a NEW file with
 ```
