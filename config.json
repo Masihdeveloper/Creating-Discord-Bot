@@ -1,5 +1,6 @@
 {
   "botToken": "YOUR BOT TOKEN",
   "prefix": "YOUR PREFIX",
+  "guildId": "YOUR GUILD ID"
   "voiceChannelId": "YOUR VOICE CHANNEL ID"
 }
