@@ -55,3 +55,7 @@ have a good day and enjoy your new bot :)
 For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/
 
 Copyright (c): Masih 2022/12/16
+
+
+## Images
+[Ping Command](https://cdn.discordapp.com/attachments/929430663529119815/1091620278691438602/image.png)
