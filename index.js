@@ -58,7 +58,7 @@ client.on("ready", async () => {
       activities: [{ name: activityName[random], type: activityType[random] }],
     });
   }
-  // Refresh to Info every 15s
+  // Refresh the Info every 15s
   setInterval(changeStatus, 15000);
 
   //Join to a Voice Channel
@@ -128,4 +128,5 @@ client.on("messageCreate", async (message) => {
   }
 });
 
+//Logged in to Your Application Bot
 client.login(config.botToken);
