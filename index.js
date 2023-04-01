@@ -61,7 +61,7 @@ client.on("ready", async () => {
   // Refresh the Info every 15s
   setInterval(changeStatus, 15000);
 
-  //Join to a Voice Channel
+  // Join to a Voice Channel
   function joinVoice() {
     joinVoiceChannel({
       channelId: voiceChannel.id,
@@ -71,6 +71,14 @@ client.on("ready", async () => {
     });
   }
   setInterval(joinVoice, 30000);
+
+  // RGB Role
+  function editRole() {
+    const rgbRole = voiceChannel.guild.roles.cache.get(config.rgbRoleId);
+    rgbRole.edit({ color: "Random" });
+  }
+  // Edit the Role color every 6 minutes
+  setInterval(editRole, 360000);
 
   console.log(
     `Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdev1 | Don't forget to ⭐`
