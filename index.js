@@ -77,8 +77,8 @@ client.on("ready", async () => {
     const rgbRole = voiceChannel.guild.roles.cache.get(config.rgbRoleId);
     rgbRole.edit({ color: "Random" });
   }
-  // Edit the Role color every 6 minutes
-  setInterval(editRole, 360000);
+  // Edit the Role color every 1 minute
+  setInterval(editRole, 60000);
 
   console.log(
     `Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdev1 | Don't forget to ⭐`
