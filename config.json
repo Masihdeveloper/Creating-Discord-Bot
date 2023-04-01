@@ -1,5 +1,6 @@
 {
   "botToken": "YOUR BOT TOKEN",
   "prefix": "YOUR PREFIX",
-  "voiceChannelId": "YOUR VOICE CHANNEL ID"
+  "voiceChannelId": "YOUR VOICE CHANNEL ID",
+  "rgbRoleId": "YOUR RGB ROLE ID"
 }
