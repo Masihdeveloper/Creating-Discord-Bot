@@ -21,6 +21,7 @@ npm install
 ```
 If is not worked use this in your terminal:
 <hr>
+
 ```
 npm install Discord.js
 ```
@@ -28,6 +29,7 @@ and
 ```
 npm install @discordjs/voice
 ```
+
 <hr>
 wait to install...
 Now create a NEW file with
