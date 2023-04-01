@@ -23,7 +23,7 @@ If is not worked use this in your terminal:
 <hr>
 
 ```
-npm install Discord.js
+npm install discord.js
 ```
 and
 ```
@@ -48,7 +48,7 @@ node .
 
 🎉Congratulations your bot was successfully online!
 
-If you have a problem while usign this source make your to DM me discord: Masih#0258, I will help you and fix your issue!
+If you have a problem while usign this source make your to DM me on Discord: Masih#0258, I will help you and fix your issue!
 
 have a good day and enjoy your new bot :)
 
