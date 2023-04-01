@@ -48,11 +48,8 @@ node .
 
 🎉Congratulations your bot was successfully online!
 
-If you have a problem while usign this source make your to DM me on Discord: Masih#0258, I will help you and fix your issue!
 
 have a good day and enjoy your new bot :)
-
-For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/
 
 
 
@@ -64,3 +61,7 @@ For get more information of How these codes work? you can simply check official 
 ![RGB Role](https://cdn.discordapp.com/attachments/929430663529119815/1091621173298745364/image.png)
 
 Copyright (c): Masih 2022/12/16
+
+If you have a problem while usign this source make your to DM me on Discord: Masih#0258, I will help you and fix your issue!
+
+For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/
