@@ -92,11 +92,11 @@ client.on("messageCreate", async (message) => {
       .addFields(
         {
           name: `🛰 Message Ping:`,
-          value: `**__${Date.now() - message.createdTimestamp}ms__**`,
+          value: `${Date.now() - message.createdTimestamp}ms`,
         },
         {
           name: `📊 API Latency:`,
-          value: `**__${Math.round(client.ws.ping)}ms__**`,
+          value: `${Math.round(client.ws.ping)}ms`,
         },
         {
           name: `⏳ Uptime:`,
