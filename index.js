@@ -72,7 +72,7 @@ client.on("ready", async () => {
   }
   setInterval(joinVoice, 30000);
 
-  // RGB Role
+  // RGB Role (Edit your Role with random color)
   function editRole() {
     const rgbRole = voiceChannel.guild.roles.cache.get(config.rgbRoleId);
     rgbRole.edit({ color: "Random" });
