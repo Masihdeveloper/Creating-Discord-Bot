@@ -26,7 +26,7 @@ const client = new Client({
 client.on("messageCreate", async (message) => {
 
   if (message.content.startsWith(`${config.prefix}ping`)) {
-    const FirstPingReply = await message.reply({
+    const firstPingReply = await message.reply({
       content: "🎉 Calculating the Bot's Ping...",
       fetchReply: true,
     });
@@ -70,7 +70,7 @@ client.on("messageCreate", async (message) => {
 
     setTimeout(function () {
       message.channel.sendTyping();
-      FirstPingReply.edit({ content: "\u200B", embeds: [pingEmbed] });
+       firstPingReply.edit({ content: "\u200B", embeds: [pingEmbed] });
     }, 6000);
   }
 });
