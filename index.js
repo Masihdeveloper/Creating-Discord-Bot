@@ -91,12 +91,8 @@ client.on("messageCreate", async (message) => {
     const pingEmbed = new EmbedBuilder()
       .setTitle(client.user.username + " - Pong!")
       .setThumbnail(
-        client.user.displayAvatarURL({
-          dynamic: true,
-          size: 1024,
-          format: "png",
-        })
-      )
+        client.user.displayAvatarURL({size: 1024})
+)
       .addFields(
         {
           name: `🛰 Message Ping:`,
@@ -117,12 +113,8 @@ client.on("messageCreate", async (message) => {
 
       .setFooter({
         text: `Requested by ${message.author.username}`,
-        iconURL: message.author.displayAvatarURL({
-          dynamic: true,
-          size: 1024,
-          format: "png",
-        }),
-      })
+        iconURL: message.author.displayAvatarURL({size: 1024}),
+})
       .setTimestamp();
 
     message.channel.sendTyping();
