@@ -113,7 +113,7 @@ client.on("messageCreate", async (message) => {
           )}:f> | <t:${Math.round(client.readyTimestamp / 1000)}:R>`,
         }
       )
-      .setColor(`${message.guild.members.me.displayHexColor}`)
+      .setColor(message.guild.members.me.displayHexColor)
 
       .setFooter({
         text: `Requested by ${message.author.username}`,
