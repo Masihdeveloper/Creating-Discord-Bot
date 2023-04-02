@@ -93,7 +93,7 @@ client.on("messageCreate", async (message) => {
       .setThumbnail(
         client.user.displayAvatarURL({
           dynamic: true,
-          size: 4096,
+          size: 1024,
           format: "png",
         })
       )
@@ -119,7 +119,7 @@ client.on("messageCreate", async (message) => {
         text: `Requested by ${message.author.username}`,
         iconURL: message.author.displayAvatarURL({
           dynamic: true,
-          size: 4096,
+          size: 1024,
           format: "png",
         }),
       })
