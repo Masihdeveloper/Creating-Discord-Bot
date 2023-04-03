@@ -1,7 +1,7 @@
 /* 
 Make Online your Bot in Discord.js V14.8.0
 Hope you Enjoy, Made with 💜 by Masih#0258
-Github: https://github.com/Masihdev1 | Don't forget to ⭐
+GitHub: https://github.com/Masihdev1 | Don't forget to ⭐
 Website: https://masihdev.tk/
 Copyright Masih 2024 All Right Reserved!
 */
