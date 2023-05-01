@@ -68,6 +68,6 @@ RGB Role
 
 Copyright (c): Masih 2022/12/16
 
-If you have a problem while usign this source make your to DM me on Discord: Masih#0258, I will help you and fix your issue!
+If you have a problem while usign this source make sure your to DM me on Discord: Masih#0258, I will help you and fix your issue ASAP!
 
 For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/
