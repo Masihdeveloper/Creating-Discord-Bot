@@ -66,7 +66,7 @@ client.on("ready", async () => {
     joinVoiceChannel({
       channelId: voiceChannel.id,
       guildId: voiceChannel.guild.id,
-      selfDeaf: true, // Also you change it to true for deafen in Voice Channel
+      selfDeaf: true, // Also you change it to false for undeafen in Voice Channel
       adapterCreator: voiceChannel.guild.voiceAdapterCreator,
     });
   }
