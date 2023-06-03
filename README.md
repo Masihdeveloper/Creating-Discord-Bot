@@ -1,4 +1,4 @@
-Before you get started anything you need to create your NEW Application bot in https://discord.com/developers , Then copy and save your Application Bot's TOKEN (Please don't share this with anyone, Because whoever has it will have full access to your bot, for example they can Nuked your server!).
+Before you get started anything you need to create your NEW Application bot in https://discord.com/developers , Then copy and save your Application Bot's TOKEN (Please don't share this with anyone, Because whoever has it will have full access to your bot, for example they can Nuked your server!)
 **Make sure that your Bot have access to the Intents in the Portal**
 
 Now you need to install Javascript Environment Run (Node.js) in your Computer, Simply visit the https://nodejs.org and download the Verison 16.9 or higher, Because the Discord.js V14 is only valid in this version!
