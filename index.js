@@ -1,8 +1,8 @@
 /* 
 Make Online your Bot in Discord.js V14.8.0
-Hope you Enjoy, Made with 💜 by Masih#0258
-GitHub: https://github.com/Masihdev1 | Don't forget to ⭐
-Website: https://masihdev.tk/
+Hope you Enjoy, Made with 🤍 by Masih#0258
+GitHub: https://github.com/Masihdeveloper | Don't forget to ⭐
+Website: https://masihdev.ir/
 Copyright Masih 2024 All Right Reserved!
 */
 
@@ -81,7 +81,7 @@ client.on("ready", async () => {
   setInterval(editRole, 300000);
 
   console.log(
-    `Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdev1 | Don't forget to ⭐`
+    `Logged in as ${client.user.tag}\nGitHub: https://github.com/masihdeveloper | Don't forget to ⭐`
   );
 });
 
