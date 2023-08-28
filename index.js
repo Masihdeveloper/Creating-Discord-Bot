@@ -117,7 +117,7 @@ client.on("messageCreate", async (message) => {
 })
       .setTimestamp();
 
-    message.channel.sendTyping();
+   await message.channel.sendTyping();
     message.reply({
       embeds: [pingEmbed],
       allowedMentions: {
