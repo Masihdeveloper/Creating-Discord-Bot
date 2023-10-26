@@ -66,7 +66,7 @@ client.on("ready", async () => {
     joinVoiceChannel({
       channelId: voiceChannel.id,
       guildId: voiceChannel.guild.id,
-      selfDeaf: true, // Also you change it to false for undeafen in Voice Channel
+      selfDeaf: true, // Also you change it to false for unDeafen in Voice Channel
       adapterCreator: voiceChannel.guild.voiceAdapterCreator,
     });
   }
@@ -86,13 +86,11 @@ client.on("ready", async () => {
 });
 
 client.on("messageCreate", async (message) => {
-  //Advacned Ping Command
+  // Advanced Ping Command
   if (message.content.startsWith(`${config.prefix}ping`)) {
     const pingEmbed = new EmbedBuilder()
       .setTitle(client.user.username + " - Pong!")
-      .setThumbnail(
-        client.user.displayAvatarURL({size: 1024})
-)
+      .setThumbnail(client.user.displayAvatarURL({ size: 1024 }))
       .addFields(
         {
           name: `🛰 Message Ping:`,
@@ -113,11 +111,11 @@ client.on("messageCreate", async (message) => {
 
       .setFooter({
         text: `Requested by ${message.author.username}`,
-        iconURL: message.author.displayAvatarURL({size: 1024}),
-})
+        iconURL: message.author.displayAvatarURL({ size: 1024 }),
+      })
       .setTimestamp();
 
-   await message.channel.sendTyping();
+    await message.channel.sendTyping();
     message.reply({
       embeds: [pingEmbed],
       allowedMentions: {
@@ -128,5 +126,5 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-//Logged in to Your Application Bot
+// Logged in to Your Application Bot
 client.login(config.botToken);
