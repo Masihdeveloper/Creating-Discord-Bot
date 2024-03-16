@@ -39,7 +39,7 @@ Then Upload the source of this repository along with your personal information f
 
 Finallly enter the following command in your terminal to run /executing your file and wait for response in the console log...
 ``` 
-node .
+node fileName.js
 ```
 
 🎉Congratulations your bot was successfully online!
