@@ -62,8 +62,6 @@ RGB Role
 ![RGB Role](https://github.com/Masihdeveloper/Creating-Discord-Bot/assets/100484009/e4fa79c9-2271-4f8a-bd64-c56e98537ac7)
 
 
+- If you have a problem while usign this source make sure your to DM me on Discord: [Masih#0258](https://discord.com/users/901765485341859911), I will help you and fix your issue ASAP!
+- For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/
 > Copyright (c): Masih 2022/12/16
-
-If you have a problem while usign this source make sure your to DM me on Discord: [Masih#0258](https://discord.com/users/901765485341859911), I will help you and fix your issue ASAP!
-
-For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/
