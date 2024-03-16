@@ -16,10 +16,7 @@ npm init -y
 for create package.json to save your modules
 
 Now you need to install all required package such as Discord.js module with
-```
-npm install
-```
-If is not worked use this in your terminal:
+
 <hr>
 
 ```
