@@ -13,11 +13,10 @@ Select the Terminal Option and Type
 ```
 npm init -y
 ```
-for create package.json to save your modules
-
-Now you need to install all required package such as Discord.js module with
+for creating `package.json` to save your modules.
 
 <hr>
+Now you need to install all of required package/library such as Discord.js module with these commands below
 
 ```
 npm install discord.js
@@ -29,7 +28,7 @@ npm install @discordjs/voice
 
 <hr>
 
-wait to install...
+wait for installing...
 and Now create a NEW file with
 ```
 CTRL + Alt + Windows + N
