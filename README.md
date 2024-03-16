@@ -35,7 +35,7 @@ CTRL + Alt + Windows + N
 ```
 and set the name to anything you want such as: `index.js`, `bot.js`, `main.js`
 
-Then Upload the source of this repository along with your personal information for example: `botToken`, `prefix`, `voiceChannelId` and `rgbRoleId` in the [config.json](https://github.com/Masihdeveloper/Creating-Discord-Bot/blob/main/config.json) file
+Then Upload the source of this repository along with your personal information for example: `botToken`, `prefix`, `voiceChannelId` and `rgbRoleId` in the [config.json](https://github.com/Masihdeveloper/Creating-Discord-Bot/blob/main/config.json) file.
 
 Finallly enter the following command in your terminal to run /executing your file and wait for response in the console log...
 ``` 
@@ -62,6 +62,6 @@ RGB Role
 ![RGB Role](https://github.com/Masihdeveloper/Creating-Discord-Bot/assets/100484009/e4fa79c9-2271-4f8a-bd64-c56e98537ac7)
 
 
-- If you have a problem while usign this source make sure your to DM me on Discord: [Masih#0258](https://discord.com/users/901765485341859911), I will help you and fix your issue ASAP!
-- For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/
-> Copyright (c): Masih 2022/12/16, 
+- If you have a problem while usign this source make sure your to DM me on Discord: [Masih#0258](https://discord.com/users/901765485341859911), I will help you and fix your issue ASAP.
+- For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/ website.
+> Copyright (c): Masih 2022/12/16, All right reserved!
