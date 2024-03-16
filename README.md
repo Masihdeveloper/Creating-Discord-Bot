@@ -42,7 +42,7 @@ Finallly enter the following command in your terminal to run /executing your fil
 node fileName.js
 ```
 
-🎉 Congratulations, your bot was successfully online for provide some exclusive features!
+🎉 Congratulations, your bot was successfully online for provide lot's of amazing features!
 
 
 
