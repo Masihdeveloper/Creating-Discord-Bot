@@ -35,7 +35,7 @@ CTRL + Alt + Windows + N
 ```
 and set the name to anything you want such as: `index.js`, `bot.js`, `main.js`
 
-Then Upload the source of this repository along with your personal information for example: `botToken`, `prefix`, `voiceChannelId` and `rgbRoleId` in config.json
+Then Upload the source of this repository along with your personal information for example: `botToken`, `prefix`, `voiceChannelId` and `rgbRoleId` in the [config.json](https://github.com/Masihdeveloper/Creating-Discord-Bot/blob/main/config.json) file
 
 Finallly enter the following command in your terminal to run /executing your file and wait for response in the console log...
 ``` 
