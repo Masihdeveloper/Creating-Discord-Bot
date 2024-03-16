@@ -56,18 +56,21 @@ have a good day and enjoy your new bot :)
 ## Images
 Ping & Uptime Command 
 
-![Ping Command](https://cdn.discordapp.com/attachments/929430663529119815/1091620278691438602/image.png) 
+![Ping Command](https://github.com/Masihdeveloper/Creating-Discord-Bot/assets/100484009/e89b4627-4c00-43af-a0d5-b68ea2aac0f8)
+
 
 Join to a Voice Channel 
 
-![Join Voice Channel](https://cdn.discordapp.com/attachments/929430663529119815/1091620505179656262/image.png) 
+![Join Voice Channel](https://github.com/Masihdeveloper/Creating-Discord-Bot/assets/100484009/1e96a076-da84-462d-af71-71b02b31fb92)
+
 
 RGB Role 
 
-![RGB Role](https://cdn.discordapp.com/attachments/929430663529119815/1091621173298745364/image.png)
+![RGB Role](https://github.com/Masihdeveloper/Creating-Discord-Bot/assets/100484009/e4fa79c9-2271-4f8a-bd64-c56e98537ac7)
 
-Copyright (c): Masih 2022/12/16
 
-If you have a problem while usign this source make sure your to DM me on Discord: Masih#0258, I will help you and fix your issue ASAP!
+> Copyright (c): Masih 2022/12/16
+
+If you have a problem while usign this source make sure your to DM me on Discord: [Masih#0258](https://discord.com/users/901765485341859911), I will help you and fix your issue ASAP!
 
 For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/
