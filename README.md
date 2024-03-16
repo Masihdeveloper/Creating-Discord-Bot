@@ -17,20 +17,19 @@ for creating `package.json` file to save your modules.
 
 <hr>
 
-Now you need to install all of required package/library such as Discord.js module with these commands below
+Now you need to install all of required package/library such as Discord.js module with these commands below and waiting for each of them:
 
 ```
 npm install discord.js
 ```
-and
+and then
 ```
 npm install @discordjs/voice
 ```
 
 <hr>
 
-wait for installing...
-and Now create a NEW file with
+After the operation was processed with any error, please create a NEW file with
 ```
 CTRL + Alt + Windows + N
 ```
@@ -38,7 +37,7 @@ and set the name to anything you want such as: `index.js`, `bot.js`, `main.js`
 
 Then Upload the source of this repository along with your personal information for example: `botToken`, `prefix`, `voiceChannelId` and `rgbRoleId` in config.json
 
-Now enter the following command in your terminal to run and processing your file and wait for response...
+Finallly enter the following command in your terminal to run /executing your file and wait for response in the console log...
 ``` 
 node .
 ```
