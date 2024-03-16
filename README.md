@@ -17,7 +17,7 @@ for creating a place which name is `package.json` file to save your modules.
 
 <hr>
 
-Now you need to install all of required package/library such as Discord.js module with these commands below and waiting for each of them:
+Now you need to install all of required packages/libraries such as Discord.js module with these commands below and waiting for each of them:
 
 ```
 npm install discord.js
