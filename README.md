@@ -13,7 +13,7 @@ Select the Terminal Option and Type
 ```
 npm init -y
 ```
-for creating `package.json` file to save your modules.
+for creating a place which name is `package.json` file to save your modules.
 
 <hr>
 
