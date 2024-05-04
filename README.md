@@ -63,5 +63,5 @@ RGB Role
 
 
 - If you have a problem while usign this source make sure your to DM me on Discord: [Masih#0258](https://discord.com/users/901765485341859911), I will help you and fix your issue ASAP.
-- For get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/ website.
+- To get more information of How these codes work? you can simply check official guidelines in: https://discordjs.guide/ website.
 > Copyright (c): Masih 2022/12/16, All right reserved!
